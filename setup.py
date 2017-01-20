@@ -11,7 +11,7 @@ if "install" in sys.argv:
         # catch Debian's custom user site-packages directory.
         lib_paths.append(get_python_lib(prefix="/usr/local"))
     for lib_path in lib_paths:
-        existing_path = os.path.abspath(os.path.join(lib_path, "openedoo-cli-test"))
+        existing_path = os.path.abspath(os.path.join(lib_path, "openedoo-test"))
         if os.path.exists(existing_path):
             # We note the need for the warning here, but present it after the
             # command is run, so it's more likely to be seen.
@@ -20,19 +20,24 @@ if "install" in sys.argv:
 
 setup (
     name='openedoo-cli-test',
-    version='0.2.0',
+    version='0.3.6',
     url='http://openedoo.org',
     author='otest',
-    author_email='ligerrendy@gmail.com',
-    description=('openedoo cli.'),
+    author_email='arissy96@gmail.com',
+    description=('open source platform for education.'),
     license='MIT',
     packages=find_packages(),
     package_dir={'openedoo_cli':'openedoo_cli'},
     include_package_data=True,
+    scripts=['openedoo_cli/manage.py'],
     install_requires=[
-	  'flask',
-    'flask-script',
+	   'flask',
+       'flask-script',
+       'flask'
 	],
+    entry_points={'console_scripts': [
+        'openedoo-cli-test = openedoo_cli.command:main',
+    ]},
     zip_safe = False,
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',

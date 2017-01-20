@@ -11,3 +11,6 @@ redirect = redirect
 abort = abort
 render_template = render_template
 session = session
+openedoo = Flask
+
+app = Flask(__name__)
