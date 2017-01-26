@@ -1,0 +1,1 @@
+from openedoo import app

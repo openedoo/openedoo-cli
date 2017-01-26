@@ -20,7 +20,7 @@ if "install" in sys.argv:
 
 setup (
     name='openedoo-cli-test',
-    version='0.3.6',
+    version='0.4.1',
     url='http://openedoo.org',
     author='otest',
     author_email='arissy96@gmail.com',
@@ -32,8 +32,7 @@ setup (
     scripts=['openedoo_cli/manage.py'],
     install_requires=[
 	   'flask',
-       'flask-script',
-       'flask'
+       'openedoo-script-test'
 	],
     entry_points={'console_scripts': [
         'openedoo-cli-test = openedoo_cli.command:main',

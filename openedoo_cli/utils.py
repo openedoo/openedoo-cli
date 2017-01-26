@@ -1,6 +1,7 @@
 import urllib
 import os
 import tarfile
+from bin import *
 
 def download(name=None):
 	if name == None:
@@ -15,3 +16,7 @@ def download(name=None):
 	os.remove("openedoo.tar.gz")
 	return "file has installed"
 
+def readfile():
+	print read_file()
+	pass
+		
