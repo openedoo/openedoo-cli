@@ -19,23 +19,36 @@ if "install" in sys.argv:
             break
 
 setup (
-    name='openedoo-cli-test',
-    version='0.4.1',
+    name='openedoo',
+    version='0.1.6',
     url='http://openedoo.org',
-    author='otest',
-    author_email='arissy96@gmail.com',
+    author='rendiya',
+    author_email='ligerrendy@gmail.com',
     description=('open source platform for education.'),
     license='MIT',
     packages=find_packages(),
-    package_dir={'openedoo_cli':'openedoo_cli'},
+    package_dir={'openedoo_core':'openedoo_core'},
     include_package_data=True,
-    scripts=['openedoo_cli/manage.py'],
+    scripts=['openedoo_core/manage.py'],
     install_requires=[
 	   'flask',
-       'openedoo-script-test'
+       'openedoo-script-test',
+       'sqlalchemy',
+       'MySQL-python',
+       'redis',
+       'Werkzeug',
+       'itsdangerous',
+       'click',
+       'Jinja2',
+       'alembic',
+       'flask-migrate',
+       'Flask-Script',
+       'GitPython',
+       'gitdb2',
+       'smmap2'
 	],
     entry_points={'console_scripts': [
-        'openedoo-cli-test = openedoo_cli.command:main',
+        'openedoo = openedoo_core.command:main',
     ]},
     zip_safe = False,
     classifiers=[

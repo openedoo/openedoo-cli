@@ -1,8 +1,7 @@
-from openedoo import abort
-from openedoo import Response as response
+from openedoo_cli import abort
+from openedoo_cli import Response as response
 from openedoo import app
 import json
-
 
 @app.errorhandler(400)
 def page_not_found(e):

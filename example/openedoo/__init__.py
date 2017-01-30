@@ -1,5 +1,5 @@
 #from flask import Flask,abort
-from openedoo import *
+from openedoo_cli import *
 import json
 from datetime import timedelta
 

@@ -1,1 +1,1 @@
-include *.txt
+prune openedoo_core/bin/openedoo.tar.gz

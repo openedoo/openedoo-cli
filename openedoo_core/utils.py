@@ -20,3 +20,5 @@ def readfile():
 	print read_file()
 	pass
 		
+def untar():
+	print untar()

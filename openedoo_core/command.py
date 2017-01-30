@@ -6,19 +6,18 @@ from openedoo_script import RunServer, Manager, Shell
 import unittest
 import json
 import shutil
-from openedoo_cli import app
-from openedoo_cli import bin
+from openedoo_core import app
+from openedoo_core.bin.untar import untar_file
 from utils import *
+
 
 manager = Manager(app)
 
 @manager.command
 def install():
-    print download()
-
-@manager.command
-def read():
-    print readfile()
+	os.makedirs("openedoo")
+	os.chdir('openedoo')
+	print untar_file()
 
 def main():
-    manager.run()
+		manager.run()
