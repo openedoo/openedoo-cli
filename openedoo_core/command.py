@@ -15,9 +15,12 @@ manager = Manager(app)
 
 @manager.command
 def install():
-	os.makedirs("openedoo")
-	os.chdir('openedoo')
-	print untar_file()
+	try:
+		os.makedirs("openedoo")
+		os.chdir('openedoo')
+		print untar_file()
+	except Exception as e:
+		print "folder openedoo has exist"
 
 def main():
 		manager.run()
